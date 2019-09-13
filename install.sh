@@ -25,19 +25,19 @@ function helping(){
     echo "        https://www.atareao.es/podcast/una-papelera-para-el-terminal/"
 }
 
+function install_all(){
+    # Install all avilable software
+    # https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+    install_git
+    install_trash
+}
+
 function install_git(){
     # Install Git
     # https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
     echo
     echo "# Init git"
     apt install -y git-all
-}
-
-function install_all(){
-    # Install all avilable software
-    # https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-    install_git
-    install_trash
 }
 
 function install_trash(){
