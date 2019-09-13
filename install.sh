@@ -62,7 +62,8 @@ do
             ;;
         -t|--testing)
             testing
-            exit
+            shift
+            shift
             ;;
         *)
             echo "ERROR: unknown option"
