@@ -25,14 +25,14 @@ function help(){
 function install_git(){
     # Install Git
     # https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+    echo
+    echo "# Init git"
     apt install -y git-all
 }
 
 function install_all(){
     # Install all avilable software
     # https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-    echo
-    echo "# Init git"
     install_git
 }
 
