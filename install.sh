@@ -1,6 +1,6 @@
 # Install useful software
 
-function help(){
+function helping(){
     # Show help
     # https://www.atareao.es/tutorial/scripts-en-bash/una-ayuda-para-tus-scripts/
     echo "NAME"
@@ -57,7 +57,7 @@ do
             shift
             ;;
         -h|--help)
-            help
+            helping
             exit
             ;;
         -t|--testing)
@@ -67,7 +67,7 @@ do
         *)
             echo "ERROR: unknown option"
             echo
-            help
+            helping
             exit 1
             ;;
     esac
@@ -75,6 +75,6 @@ done
 
 if [ "$OPCION3" == "" ]
 then
-    help
+    helping
     exit
 fi
