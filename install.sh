@@ -20,6 +20,9 @@ function helping(){
     echo "        Show help."
     echo "    -t --testing"
     echo "        Function for test purpose."
+    echo "    -tr --trash"
+    echo "        Install trash-cli."
+    echo "        https://www.atareao.es/podcast/una-papelera-para-el-terminal/"
 }
 
 function install_git(){
@@ -34,6 +37,13 @@ function install_all(){
     # Install all avilable software
     # https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
     install_git
+    install_trash
+}
+
+function install_trash(){
+    # Install trash-cli
+    # https://www.atareao.es/podcast/una-papelera-para-el-terminal/
+    apt install -y trash-cli
 }
 
 function testing(){
@@ -62,6 +72,11 @@ do
             ;;
         -t|--testing)
             testing
+            shift
+            shift
+            ;;
+        -tr|--trash)
+            install_trash
             shift
             shift
             ;;
