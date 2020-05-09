@@ -53,6 +53,14 @@ function testing(){
 }
 
 # Main
+# Check any argument provided.
+if [ $# -eq 0 ]
+then
+    echo "[ERROR] Not arguments supplied"
+    echo
+    helping
+    exit 1
+fi
 while [[ $# -gt 0 ]]
 do
     key="$1"
@@ -89,9 +97,3 @@ do
             ;;
     esac
 done
-
-if [ "$OPCION3" == "" ]
-then
-    helping
-    exit
-fi
